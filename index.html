@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="7lXtrXksW1gqjtIctoI7T6VcaaI5Il3meaeGLeIWrik" />
 <title>Pet Spot Clinic</title>
 <style>
 :root{--green:#063b16;--green2:#08703a;--red:#ef514b;--cream:#fbfaf5;--ink:#172019;--muted:#68706b;--line:#e2e8e2;--white:#fff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;backgro[...]
@@ -56,7 +57,7 @@ function getBookedTimes(date){return getBookings().filter(x=>x.date===date).map(
 function updateBookingTimes(){const s=document.getElementById('bookingTime');if(!s)return;const current=s.value;const date=document.querySelector('[name="date"]')?.value;const booked=getBookedTimes(da[...]
 function booking(e){e.preventDefault();const f=new FormData(e.target);const data={id:Date.now(),service:selectedService,name:f.get('name'),phone:f.get('phone'),petName:f.get('petName'),petType:f.get('[...]
 function renderProducts(){const el=document.getElementById('products');if(!el)return;el.innerHTML=products.map((p,i)=>`<article class="product"><div class="visual">${escapeHtml(productName(p[0]))}<br>[...]
-function productName(n){const m={'Premium Dry Food':'طعام جاف فاخر','Chicken Dry Food':'طعام جاف بالدجاج','Puppy Food':'طعام جاف للجراء','Cat Treats':'مكافآ�[...]
+function productName(n){const m={'Premium Dry Food':'طعام جاف فاخر','Chicken Dry Food':'طعام جاف بالدجاج','Puppy Food':'طعام جاف للجراء','Cat Treats':'مكا�[...]
 function categoryName(n){const m={'Dry Food':'طعام جاف','Treats':'مكافآت','Hygiene':'العناية والنظافة','Grooming':'جروومينج','Accessories':'إكسسوارات','Hea[...]
 function addCart(i){if(!products[i][3])return;cart.push({i});localStorage.setItem('petspotCart',JSON.stringify(cart));renderCart();document.getElementById('cart').classList.add('show')}
 function renderCart(){const box=document.getElementById('cartItems');if(!box)return;if(!cart.length){box.innerHTML='<p class="muted">'+(lang==='ar'?'السلة فارغة.':'Your cart is empty.')+'</p[...]
